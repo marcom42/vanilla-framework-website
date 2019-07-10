@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Marco Matta</title>
+  <link rel="stylesheet" type="text/css" href="/dist/style.css">
+  
+  <style>
+  .p-strip--featured {
+    position: relative;
+    background-color: #0d5777;
+    background-image: linear-gradient(30deg, #0d5777 0%, #47929d 90%, #47929d 100%);
+    color: #f7f7f7;
+}
+
+  </style>
+  
+</head>
+<body>
+  
+  <header id="navigation" class="p-navigation">
+	  <div class="p-navigation__banner">
+		<!--<div class="p-navigation__logo">
+		  <a class="p-navigation__link" href="#">
+			<img class="p-navigation__image" src="https://assets.ubuntu.com/v1/5d6da5c4-logo-canonical-aubergine.svg" alt="" width="95">
+		  </a>
+		</div>-->
+		<a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+		<a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+	  </div>
+	  <nav class="p-navigation__nav">
+		<form class="p-search-box" action="https://duckduckgo.com">
+		  <input type="search" class="p-search-box__input" name="q" placeholder="Search" required="">
+		  <button type="reset" class="p-search-box__reset" alt="reset"><i class="p-icon--close"></i></button>
+		  <button type="submit" class="p-search-box__button" alt="search"><i class="p-icon--search"></i></button>
+		  <input type="hidden" name="ia" value="web">
+		  <input type="hidden" name="sites" value="marcomatta.com">
+		  <input type="hidden" name="k1" value="-1">
+		  <input type="hidden" name="kf" value="-1">
+		  <input type="hidden" name="kaf" value="1">
+		</form>
+		<span class="u-off-screen">
+		  <a href="#main-content">Jump to main content</a>
+		</span>
+		<ul class="p-navigation__links" role="menu">
+		  <li class="p-navigation__link is-selected" role="menuitem">
+			<a href="/">Home</a>
+		  </li>
+		  <li class="p-navigation__link" role="menuitem">
+			<a href="/about.html">About</a>
+		  </li>
+		  <li class="p-navigation__link" role="menuitem">
+			<a href="/blog.html">Blog</a>
+		  </li>
+		  
+		</ul>
+	  </nav>
+	</header>
+	<div class="p-strip--featured is-dark is-shallow u-no-margin--top" >
+		<div class="row u-equal-height">
+			<h1>Blog</h1>	
+		
+		</div>
+	</div>
+	<div class="p-strip is-shallow">
+		<div class="row u-equal-height">
+			
+			<ul class="p-list-tree" aria-multiselectable="true" role="tablist">
+			  <li class="p-list-tree__item p-list-tree__item--group">
+				<button class="p-list-tree__toggle" id="sub-1-btn" role="tab" aria-controls="sub-1" aria-expanded="false" onclick='OpenCategory ("sub-linux")'>Linux</button>
+				<ul class="p-list-tree" id="sub-linux" role="tabpanel" aria-hidden="true" aria-labelledby="sub-1-btn">
+				  <li class="p-list-tree__item"><a href='/posts/20190621-why-use-linux.html'>Why you should use Linux</a></li>
+				</ul>
+			  </li>
+			</ul>
+
+		</div>
+	</div>
+	
+
+	<hr>
+	<div class="p-strip u-no-padding">
+      <footer class="p-footer u-no-margin--top">
+        <div class="row u-equal-height">
+          <div class="col-11">
+            <p class="u-no-max-width">© 2019 Marco Matta - Wesite layout by <a href="https://canonical.com/">Canonical</a></p>
+            <nav class="p-footer__nav">
+              <ul class="p-footer__links">
+                <li class="p-footer__item"><a href="" class="p-footer__link">Home</a></li>
+                <li class="p-footer__item"><a href="about.html" class="p-footer__link">About</a></li>
+                <li class="p-footer__item"><a class="screen-only p-footer__link" href="https://github.com/canonical-websites/insights.ubuntu.com/issues">Posts</a></li>
+                <li class="p-footer__item"><a class="p-footer__link" href="contact.html">Contact Me</a></li>
+                <li class="p-footer__item"><a class="p-footer__link" href="/archives">Archives</a></li>
+              </ul>
+              <span class="u-off-screen">
+                <a href="#">Go to the top of the page</a>
+              </span>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script>
+		function OpenCategory (id) {
+			var nested = document.getElementById(id);
+			
+			if (nested.getAttribute('aria-hidden') == 'false') {
+				nested.setAttribute('aria-hidden', 'true');
+				return;
+			}
+			nested.setAttribute('aria-hidden', 'false');
+		}
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
